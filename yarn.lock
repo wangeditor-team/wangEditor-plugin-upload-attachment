@@ -1845,7 +1845,7 @@
     "@uppy/utils" "^4.0.5"
     namespace-emitter "^2.0.1"
 
-"@uppy/core@^2.1.1":
+"@uppy/core@^2.1.1", "@uppy/core@^2.1.5":
   version "2.1.5"
   resolved "https://registry.npmmirror.com/@uppy/core/-/core-2.1.5.tgz#29464c0cc37bf1f931d2d3747a6a145c438a0d9a"
   integrity sha512-rLLZpShV66LbeRhg64pKf4N4ZU2xBqXNebekXgvaiuADW046SlmxhgCl955pyj057Lqp562TIUMIfF0lC9iusw==
