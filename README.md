@@ -1,2 +1,3 @@
-# wangEditor-plugin-upload-attachments
-wangEditor upload-attachments plugin
+# wangEditor 上传附件 插件
+
+开发中...

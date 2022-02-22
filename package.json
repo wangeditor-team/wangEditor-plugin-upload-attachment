@@ -1,0 +1,107 @@
+{
+  "name": "@wangeditor/plugin-upload-attachment",
+  "version": "0.0.1",
+  "description": "wangEditor 上传附件",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wangeditor-team/wangEditor-plugin-upload-attachment.git"
+  },
+  "keywords": [
+    "附件",
+    "上传附件",
+    "attachment",
+    "wangeditor"
+  ],
+  "author": "github.com/wangfupeng1988",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wangeditor-team/wangEditor-plugin-upload-attachment/issues"
+  },
+  "homepage": "https://github.com/wangeditor-team/wangEditor-plugin-upload-attachment#readme",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/src/index.d.ts",
+  "scripts": {
+    "test": "cross-env NODE_OPTIONS=--unhandled-rejections=warn jest --detectOpenHandles --passWithNoTests",
+    "test-c": "cross-env NODE_OPTIONS=--unhandled-rejections=warn jest --coverage",
+    "dev": "cross-env NODE_ENV=development webpack serve --config build/webpack.dev.js",
+    "build": "cross-env NODE_ENV=production webpack --config build/webpack.prod.js",
+    "build:analyzer": "cross-env NODE_ENV=production_analyzer webpack --config build/webpack.prod.js",
+    "release": "release-it",
+    "format": "yarn prettier --write",
+    "lint": "eslint \"{src,test,cypress,build,example}/**/*.{js,ts}\"",
+    "lint-fix": "eslint --fix \"{src,test,cypress,build,example}/**/*.{js,ts}\"",
+    "prettier": "prettier --write --config .prettierrc.js \"{src,test,cypress,build,example}/**/*.{js,ts}\""
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js}": [
+      "yarn prettier",
+      "yarn lint",
+      "yarn test"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    }
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.14",
+    "@babel/preset-env": "^7.13.12",
+    "@testing-library/jest-dom": "^5.16.2",
+    "@types/jest": "^27.4.0",
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "@wangeditor/core": "^0.14.7",
+    "@wangeditor/editor": "^0.15.6",
+    "autoprefixer": "^10.2.5",
+    "babel-jest": "^27.3.1",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^3.0.0",
+    "commitlint": "^16.2.1",
+    "commitlint-config-cz": "^0.13.3",
+    "cross-env": "^7.0.3",
+    "crypto": "^1.0.1",
+    "css-loader": "^5.2.0",
+    "cz-customizable": "^6.3.0",
+    "eslint": "^8.9.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "html-webpack-plugin": "^5.3.1",
+    "husky": "^7.0.4",
+    "jest": "^27.5.1",
+    "jest-environment-jsdom": "^27.5.1",
+    "less": "^4.1.1",
+    "less-loader": "^8.0.0",
+    "lint-staged": "^12.3.4",
+    "postcss-loader": "^5.2.0",
+    "prettier": "^2.5.1",
+    "raw-loader": "^4.0.2",
+    "release-it": "^14.11.6",
+    "snabbdom": "^3.3.1",
+    "style-loader": "^2.0.0",
+    "ts-jest": "^27.0.7",
+    "ts-loader": "^8.1.0",
+    "typescript": "^4.2.3",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.30.0",
+    "webpack-bundle-analyzer": "^4.4.0",
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.7.3"
+  },
+  "peerDependencies": {
+    "@wangeditor/core": ">=0.14.7",
+    "@wangeditor/editor": ">=0.15.6",
+    "snabbdom": "^3.3.1"
+  },
+  "dependencies": {
+    "dom7": "^4.0.4"
+  }
+}

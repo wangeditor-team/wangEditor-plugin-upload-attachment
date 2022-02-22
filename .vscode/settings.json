@@ -1,0 +1,23 @@
+{
+  "editor.formatOnSave": true,
+  "cSpell.words": [
+    "commitlint",
+    "Elems",
+    "hoverbar",
+    "nocheck",
+    "prettierrc",
+    "snabbdom",
+    "vnode",
+    "wangeditor",
+    "wangfupeng"
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.validate": [
+    "javascript"
+  ],
+  "editor.detectIndentation": false,
+  "editor.tabSize": 2
+}

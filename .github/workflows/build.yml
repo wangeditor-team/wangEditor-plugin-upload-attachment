@@ -1,0 +1,31 @@
+name: test and build
+
+on:
+  push:
+    branches:
+      - 'main'
+      - 'master'
+      - 'dev'
+      - 'feature-*'
+      - 'fix-*'
+      - 'hotfix-*'
+      - 'refactor-*'
+    paths:
+      - '.github/workflows/*'
+      - 'src/**'
+      - 'example/**'
+      - 'test/**'
+      - 'build/**'
+
+jobs:
+  publish-npm:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: https://registry.npmjs.org/
+      - run: npm i
+      - run: npm run test
+      - run: npm run build
