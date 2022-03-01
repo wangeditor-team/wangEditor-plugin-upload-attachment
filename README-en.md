@@ -19,7 +19,7 @@ yarn add @wangeditor/plugin-upload-attachment
 ### Register to editor
 
 ```js
-import { Boot, IEditorConfig, IToolbarConfig } from '@wangeditor/editor'
+import { Boot } from '@wangeditor/editor'
 import attachmentModule from '@wangeditor/plugin-upload-attachment'
 
 // Register
