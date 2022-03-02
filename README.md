@@ -43,7 +43,7 @@ const editorConfig: Partial<IEditorConfig> = {
   MENU_CONF: {
     // “上传附件”菜单的配置
     uploadAttachment: {
-      server: '/api/upload', //一个文件地址
+      server: '/api/upload', // 服务端地址
       timeout: 5 * 1000, // 5s
 
       fieldName: 'custom-fileName',
@@ -132,6 +132,28 @@ const toolbarConfig: Partial<IToolbarConfig> = {
 ```
 
 然后创建编辑器和工具栏，会用到 `editorConfig` 和 `toolbarConfig` 。具体查看 wangEditor 文档。
+
+### 服务端返回格式
+
+成功
+
+```json
+{
+  "errno": 0,
+  "data": {
+    "url": "附件的下载链接"
+  }
+}
+```
+
+失败（会触发 `onFailed` 函数）
+
+```json
+{
+  "errno": 1,
+  "message": "错误信息"
+}
+```
 
 ### 显示 HTML
 

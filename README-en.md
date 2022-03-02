@@ -129,6 +129,28 @@ const toolbarConfig: Partial<IToolbarConfig> = {
 
 Then create editor and toolbar, you will use `editorConfig` and `toolbarConfig`
 
+### Server response format
+
+Success:
+
+```json
+{
+  "errno": 0,
+  "data": {
+    "url": "Download link of attachment"
+  }
+}
+```
+
+Failed，will trigger `onFailed` function.
+
+```json
+{
+  "errno": 1,
+  "message": "Error message"
+}
+```
+
 ### Render HTML
 
 You will get a attachment's HTML format like this
