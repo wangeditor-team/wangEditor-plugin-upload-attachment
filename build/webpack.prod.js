@@ -34,8 +34,18 @@ module.exports = merge(webpackCommonConf, {
   externals: {
     // 这里的 value 需要跟 @wangeditor/editor 定义的 umd name 对应上，否则在 windows 就会找不到对应的对象
     // 具体值参考如下链接 https://github.com/wangeditor-team/wangEditor-v5/blob/main/packages/editor/rollup.config.js
-    '@wangeditor/core': 'WangEditorCore',
-    '@wangeditor/editor': 'wangEditor',
+    '@wangeditor/core': {
+      commonjs: '@wangeditor/core',
+      commonjs2: '@wangeditor/core',
+      amd: '@wangeditor/core',
+      root: 'WangEditorCore',
+    },
+    '@wangeditor/editor': {
+      commonjs: '@wangeditor/editor',
+      commonjs2: '@wangeditor/editor',
+      amd: '@wangeditor/editor',
+      root: 'wangEditor',
+    },
   },
   plugins,
   devtool: 'source-map',
