@@ -1,6 +1,6 @@
 {
   "name": "@wangeditor/plugin-upload-attachment",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "wangEditor 上传附件",
   "repository": {
     "type": "git",
@@ -59,7 +59,7 @@
     "@typescript-eslint/eslint-plugin": "^5.12.0",
     "@typescript-eslint/parser": "^5.12.0",
     "@wangeditor/core": "^0.14.7",
-    "@wangeditor/editor": "^0.15.6",
+    "@wangeditor/editor": "^0.15.14",
     "autoprefixer": "^10.2.5",
     "babel-jest": "^27.3.1",
     "babel-loader": "^8.2.2",

@@ -5,7 +5,7 @@
 
 import Uppy, { UppyFile } from '@uppy/core'
 import { IDomEditor } from '@wangeditor/editor'
-import { createUploader } from '@wangeditor/core'
+import { createUploader } from '@wangeditor/editor'
 import { AttachmentElement } from '../custom-types'
 import { IUploadConfigForAttachment } from './config'
 
