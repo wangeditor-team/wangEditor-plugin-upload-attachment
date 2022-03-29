@@ -34,8 +34,8 @@ package.json
 - 定义 `"main": "dist/index.js"`
 - 定义 `"module": "dist/index.js"`
 - 定义 `"types": "dist/src/index.d.ts"`
-- `@wangeditor/core` `@wangeditor/editor` 不要安装在 `dependencies` ，否则用户安装时也会安装它们
+- `@wangeditor/editor` 不要安装在 `dependencies` ，否则用户安装时也会安装它们
 
 webpack 配置
 - 定义 `library`
-- 定义 `externals` ，构建时忽略 `@wangeditor/core` `@wangeditor/editor` ，否则体积会很大
+- 定义 `externals` ，构建时忽略 `@wangeditor/editor` ，否则体积会很大
