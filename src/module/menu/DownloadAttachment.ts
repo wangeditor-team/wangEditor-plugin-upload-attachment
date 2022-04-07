@@ -12,7 +12,7 @@ class DownloadAttachmentMenu implements IButtonMenu {
   readonly title = t('attachment.download')
   readonly iconSvg = DOWNLOAD_SVG
   readonly tag = 'button'
-  readonly awaysEnable = true
+  readonly alwaysEnable = true
 
   getValue(editor: IDomEditor): string | boolean {
     const attachmentElem = this.getSelectedElem(editor)
