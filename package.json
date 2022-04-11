@@ -1,6 +1,6 @@
 {
   "name": "@wangeditor/plugin-upload-attachment",
-  "version": "0.0.7",
+  "version": "1.0.0",
   "description": "wangEditor 上传附件",
   "repository": {
     "type": "git",
@@ -58,7 +58,7 @@
     "@types/jest": "^27.4.0",
     "@typescript-eslint/eslint-plugin": "^5.12.0",
     "@typescript-eslint/parser": "^5.12.0",
-    "@wangeditor/editor": "^0.15.17",
+    "@wangeditor/editor": "^5.0.0",
     "autoprefixer": "^10.2.5",
     "babel-jest": "^27.3.1",
     "babel-loader": "^8.2.2",
@@ -97,7 +97,7 @@
   },
   "peerDependencies": {
     "@uppy/core": "^2.1.5",
-    "@wangeditor/editor": ">=0.15.17",
+    "@wangeditor/editor": ">=5.0.0",
     "snabbdom": "^3.3.1"
   },
   "dependencies": {

@@ -4,7 +4,7 @@
 
 ## Introduction
 
-[wangEditor](https://www.wangeditor.com/v5/) upload attachment plugin.
+[wangEditor](https://www.wangeditor.com/en/) upload attachment plugin.
 
 ![](./_img/demo.png)
 

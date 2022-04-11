@@ -4,7 +4,7 @@
 
 ## 介绍
 
-[wangEditor](https://www.wangeditor.com/v5/) 上传附件 插件。
+[wangEditor](https://www.wangeditor.com/) 上传附件 插件。
 
 ![](./_img/demo.png)
 

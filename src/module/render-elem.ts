@@ -27,7 +27,7 @@ function renderAttachment(elem: SlateElement, children: VNode[] | null, editor: 
         marginRight: '3px',
         border:
           selected && !isDisabled
-            ? '2px solid var(--w-e-textarea-selected-border-color)' // wangEditor 提供了 css var https://www.wangeditor.com/v5/guide/theme.html
+            ? '2px solid var(--w-e-textarea-selected-border-color)' // wangEditor 提供了 css var https://www.wangeditor.com/v5/theme.html
             : '2px solid transparent',
         borderRadius: '3px',
         padding: '0 3px',
