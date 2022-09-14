@@ -9,7 +9,7 @@ import { AttachmentElement } from './custom-types'
 // 生成 html 的函数
 function attachmentToHtml(elem: SlateElement, childrenHtml: string): string {
   const { link = '', fileName = '' } = elem as AttachmentElement
-  return `<span data-w-e-type="attachment" data-w-e-is-void data-w-e-is-inline data-link="${link}" data-fileName="${fileName}">${fileName}</span>`
+  return `<a data-w-e-type="attachment" data-w-e-is-void data-w-e-is-inline href="${link}" download="${fileName}">${fileName}</a>`
 }
 
 // 配置

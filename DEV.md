@@ -11,6 +11,10 @@
 
 `yarn dev` 启动本地服务，**使用 example 目录**。
 
+PS：需启动 https://github.com/wangeditor-team/server 创建一个服务端，提供上传接口
+
+## 单元测试
+
 `yarn test` 单元测试，使用 test 目录。
 
 ## build 构建

@@ -16,6 +16,8 @@ yarn add @wangeditor/plugin-upload-attachment
 
 ## 使用
 
+【注意】该文档要求 `@wangeditor/editor` 版本 `>=5.1.16`
+
 ### 注册到编辑器
 
 ```js
@@ -34,6 +36,7 @@ Boot.registerModule(attachmentModule)
 import { IEditorConfig } from '@wangeditor/editor'
 
 const editorConfig: Partial<IEditorConfig> = {
+
   // 在编辑器中，点击选中“附件”节点时，要弹出的菜单
   hoverbarKeys: {
     attachment: {
@@ -160,7 +163,7 @@ const toolbarConfig: Partial<IToolbarConfig> = {
 附件节点获取的 HTML 格式如下，可以直接显示。
 
 ```html
-<span data-w-e-type="attachment" data-w-e-is-void data-w-e-is-inline data-link="https://xxx.com/aaa/bbb/xxx.zip" data-fileName="xxx.zip">xxx.zip</span>
+<a data-w-e-type="attachment" data-w-e-is-void data-w-e-is-inline href="https://xxx.com/aaa/bbb/xxx.zip" download="xxx.zip">xxx.zip</a>
 ```
 
 ## 其他

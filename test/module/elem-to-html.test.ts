@@ -23,7 +23,7 @@ describe('attachment elem-to-html', () => {
   it('elem to html', () => {
     const html = elemToHtmlConf.elemToHtml(attachmentElem, '')
     expect(html).toBe(
-      `<span data-w-e-type="attachment" data-w-e-is-void data-w-e-is-inline data-link="${link}" data-fileName="${fileName}">${fileName}</span>`
+      `<a data-w-e-type="attachment" data-w-e-is-void data-w-e-is-inline href="${link}" download="${fileName}">${fileName}</a>`
     )
   })
 })

@@ -11,8 +11,8 @@ describe('attachment plugin', () => {
   const editor = withAttachment(createEditor())
   const elem: AttachmentElement = {
     type: 'attachment',
-    link: 'a',
-    fileName: 'b',
+    link: 'x',
+    fileName: 'y',
     children: [{ text: '' }],
   }
 

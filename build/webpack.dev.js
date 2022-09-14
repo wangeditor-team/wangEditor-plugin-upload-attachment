@@ -9,7 +9,7 @@ module.exports = merge(webpackCommonConf, {
   mode: 'development',
   entry: path.join(examplePath, 'index'),
   devServer: {
-    port: 3000,
+    port: 8000,
     progress: true, // 显示打包的进度条
     contentBase: distPath, // 根目录
     // open: true,  // 自动打开浏览器

@@ -14,7 +14,7 @@ describe('attachment render-elem', () => {
   const attachmentElem: AttachmentElement = {
     type: 'attachment',
     fileName,
-    link: 'a',
+    link: 'x',
     children: [{ text: '' }],
   }
 

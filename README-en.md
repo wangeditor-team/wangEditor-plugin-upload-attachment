@@ -156,7 +156,7 @@ Failed，will trigger `onFailed` function.
 You will get a attachment's HTML format like this
 
 ```html
-<span data-w-e-type="attachment" data-w-e-is-void data-w-e-is-inline data-link="https://xxx.com/aaa/bbb/xxx.zip" data-fileName="xxx.zip">xxx.zip</span>
+<a data-w-e-type="attachment" data-w-e-is-void data-w-e-is-inline href="https://xxx.com/aaa/bbb/xxx.zip" download="xxx.zip">xxx.zip</a>
 ```
 
 ## Others

@@ -12,8 +12,8 @@ function parseHtml(
   children: SlateDescendant[],
   editor: IDomEditor
 ): SlateElement {
-  const link = elem.getAttribute('data-link') || ''
-  const fileName = elem.getAttribute('data-fileName') || ''
+  const link = elem.getAttribute('href') || ''
+  const fileName = elem.getAttribute('download') || ''
   return {
     type: 'attachment',
     link,
@@ -23,7 +23,7 @@ function parseHtml(
 }
 
 const parseHtmlConf = {
-  selector: 'span[data-w-e-type="attachment"]',
+  selector: 'a[data-w-e-type="attachment"]',
   parseElemHtml: parseHtml,
 }
 

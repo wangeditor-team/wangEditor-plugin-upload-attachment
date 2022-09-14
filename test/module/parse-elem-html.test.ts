@@ -11,17 +11,17 @@ describe('parse elem html', () => {
   const editor = createEditor()
 
   it('selector', () => {
-    expect(parseHtmlConf.selector).toBe('span[data-w-e-type="attachment"]')
+    expect(parseHtmlConf.selector).toBe('a[data-w-e-type="attachment"]')
   })
 
   it('parse html', () => {
     const link = 'aaa'
     const fileName = 'bbb'
-    // elem-to-html 产出的 html 格式： <span data-w-e-type="attachment" data-w-e-is-void data-w-e-is-inline data-link="${link}" data-fileName="${fileName}">${fileName}</span>
-    const elem = document.createElement('span')
+    // elem-to-html 产出的 html 格式： <a data-w-e-type="attachment" data-w-e-is-void data-w-e-is-inline href="${link}" download="${fileName}">${fileName}</a>
+    const elem = document.createElement('a')
     elem.setAttribute('data-w-e-type', 'attachment')
-    elem.setAttribute('data-link', link)
-    elem.setAttribute('data-fileName', fileName)
+    elem.setAttribute('href', link)
+    elem.setAttribute('download', fileName)
 
     const attachment = parseHtmlConf.parseElemHtml(elem, [], editor) as AttachmentElement
     expect(attachment.type).toBe('attachment')

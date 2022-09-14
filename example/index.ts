@@ -34,7 +34,7 @@ const editorConfig: Partial<IEditorConfig> = {
   MENU_CONF: {
     // 上传附件的菜单配置
     uploadAttachment: {
-      server: 'http://106.12.198.214:3000/api/upload-video', //一个文件地址
+      server: 'http://127.0.0.1:3000/api/upload-video', //一个文件地址
       timeout: 5 * 1000, // 5s
 
       fieldName: 'custom-fileName',
@@ -118,13 +118,33 @@ const editor = createEditor({
   //       },
   //     ],
   //   },
+  // {
+  //   "type": "paragraph",
+  //   "children": [
+  //     {
+  //       "text": " "
+  //     },
+  //     {
+  //       "type": "link",
+  //       "url": "http://localhost:8000/",
+  //       "children": [
+  //         {
+  //           "text": "http://localhost:8000/"
+  //         }
+  //       ]
+  //     },
+  //     {
+  //       "text": " "
+  //     }
+  //   ]
+  // },
   //   {
   //     // @ts-ignore
   //     type: 'paragraph',
   //     children: [{ text: '选一个视频文件，作为附件上传：' }],
   //   },
   // ],
-  html: '<p>hello&nbsp;world<span data-w-e-type="attachment" data-w-e-is-void data-w-e-is-inline data-link="https://pan.baidu.com/" data-fileName="附件文件名"></span></p><p>选一个视频文件，作为附件上传：</p>',
+  html: '<p>hello world<a data-w-e-type="attachment" data-w-e-is-void data-w-e-is-inline href="https://pan.baidu.com/" download="附件文件名">附件文件名</a></p><p> <a href="http://localhost:8000/" target="_blank">http://localhost:8000/</a> </p><p>选一个视频文件，作为附件上传：</p>',
 })
 const toolbar = createToolbar({
   editor,
