@@ -7,6 +7,7 @@ import { DomEditor, IDomEditor, SlateRange, t } from '@wangeditor/editor'
 import { IButtonMenu } from '@wangeditor/editor'
 import { DOWNLOAD_SVG } from '../../constants/icon-svg'
 import { AttachmentElement } from '../custom-types'
+import { getUploadAttachmentMenuConfig } from './helper'
 
 class DownloadAttachmentMenu implements IButtonMenu {
   readonly title = t('attachment.download')
@@ -28,7 +29,12 @@ class DownloadAttachmentMenu implements IButtonMenu {
   exec(editor: IDomEditor, value: string | boolean) {
     if (!value) return
     if (typeof value !== 'string') return
-    window.open(value, '_blank')
+    const { customDownload } = getUploadAttachmentMenuConfig(editor)
+    if (customDownload) {
+      customDownload(value)
+    } else {
+      window.open(value, '_blank')
+    }
   }
 
   isDisabled(editor: IDomEditor): boolean {

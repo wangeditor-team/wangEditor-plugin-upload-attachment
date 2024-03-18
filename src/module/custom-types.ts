@@ -7,6 +7,8 @@ type EmptyText = {
   text: ''
 }
 
+export type customDownload = (link: string) => void
+
 export type AttachmentElement = {
   type: 'attachment'
   fileName: string
