@@ -107,6 +107,11 @@ const editorConfig: Partial<IEditorConfig> = {
       //   // 上传之后用 insertFn(fileName, link) 插入到编辑器
       // },
 
+      // // 自定义下载, 点击“附件”节点触发, 如果没有设置此属性，则使用默认window.open
+      // customDownload(url: string) {
+      //   alert('自定义下载')
+      // },
+
       // 插入到编辑器后的回调
       onInsertedAttachment(elem: AttachmentElement) {
         console.log('inserted attachment', elem)

@@ -6,9 +6,11 @@
 import { h, VNode } from 'snabbdom'
 import { DomEditor, IDomEditor, SlateElement } from '@wangeditor/editor'
 import { AttachmentElement } from './custom-types'
+import { getUploadAttachmentMenuConfig } from './menu/helper'
 
 function renderAttachment(elem: SlateElement, children: VNode[] | null, editor: IDomEditor): VNode {
   const isDisabled = editor.isDisabled()
+  const { customDownload } = getUploadAttachmentMenuConfig(editor)
 
   // 当前节点是否选中
   const selected = DomEditor.isNodeSelected(editor, elem)
@@ -39,7 +41,11 @@ function renderAttachment(elem: SlateElement, children: VNode[] | null, editor: 
         click() {
           if (!isDisabled) return
           if (link) {
-            window.open(link, '_blank')
+            if (customDownload) {
+              customDownload(link)
+            } else {
+              window.open(link, '_blank')
+            }
           }
         },
       },

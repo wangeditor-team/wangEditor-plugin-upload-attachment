@@ -9,7 +9,7 @@ import { createUploader } from '@wangeditor/editor'
 import { AttachmentElement } from '../custom-types'
 import { IUploadConfigForAttachment } from './config'
 
-function getUploadAttachmentMenuConfig(editor: IDomEditor): IUploadConfigForAttachment {
+export function getUploadAttachmentMenuConfig(editor: IDomEditor): IUploadConfigForAttachment {
   // 获取配置，见 `./config.js`
   return editor.getMenuConfig('uploadAttachment') as IUploadConfigForAttachment
 }

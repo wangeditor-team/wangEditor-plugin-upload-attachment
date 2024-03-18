@@ -6,8 +6,9 @@
 import { IUploadConfig } from '@wangeditor/editor'
 import { AttachmentElement } from '../custom-types'
 import { UppyFile } from '@uppy/core'
+import { customDownload } from '../custom-types'
 
-type InsertFn = (fileName: string, link: string) => void
+type InsertFn = (fileName: string, link: string, customDownload: customDownload) => void
 
 // 在通用 uploadConfig 上，扩展 attachment 相关配置
 export type IUploadConfigForAttachment = IUploadConfig & {
@@ -20,6 +21,8 @@ export type IUploadConfigForAttachment = IUploadConfig & {
   customBrowseAndUpload?: (insertFn: InsertFn) => void
   // 插入之后的回调
   onInsertedAttachment?: (elem: AttachmentElement) => void
+
+  customDownload?: customDownload
 }
 
 export function genUploadAttachmentMenuConfig(): IUploadConfigForAttachment {
